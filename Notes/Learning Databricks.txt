@@ -1,0 +1,61 @@
+Learning Databricks
+
+Vid 01
+
+Pre-requisites:
+Apache Spark - PySpark
+Basics of Spark Streaming
+SQL
+Python
+
+Architecture of Databricks
+Databricks setup on Azure
+Data Lakehouse
+Unity Catalog
+Data Engineering
+	Notebooks
+	ETL with DLT (Delta Live Tables)
+	Jobs / Workflows
+	Autoloader
+Data Analyst
+	SQL Warehouse / Queries
+	Dashboards
+CICD with Databricks
+Setup Git / DevOps
+Databricks CLI and API
+Serverless Offerings & Benefits
+Cost Analysis and Optimizations
+
+Vid 02
+
+Challenges faced in a normal day-to-day data platform in an organization
+
+1. Too many tools. A different tool for each task. -> Data Intelligence unified solution.
+2. Propriety Solutions or Vendor Lock-ins. 
+organizations had to store data in the propriety format. Data is encoded in their format. Cannot directly communicate with data. Cannot communicate with data without using their Data Engine.
+-> Delta Lake (Data Engine) - Open Source.
+3. Data Duplication or Silos. -> Data Warehouse + Data Lake = Data Lakehouse. 
+ACID transactions
+Versioning
+Transaction logs
+Restore different versions
+Audit History
+
+Databricks Architecture Overview
+
++-------------------------------+
+| Engineer| Analyst | Scientist |
++-------------------------------+
+|   Data Intelligence Engine    | --> Powered by Generative AI + Data Lakehouse
++-------------------------------+
+|         Unity Catalog         | --> Governance
++-------------------------------+
+|          Delta Lake           | --> Core Data Engine
++-------------------------------+
+|    Data in Cloud Platform     | --> GCP, AWS or Azure (Data Lake)
++-------------------------------+
+
+For:
+	Data Engineers: Jobs / Workflows, Notebooks, Spark
+	Data Analysts: DB SQL, Dashboard
+	Data Scientist: AI/ML

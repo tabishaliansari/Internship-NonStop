@@ -1,0 +1,44 @@
+What is Tomcat?
+How to install Tomcat?
+Tomcat Admin Dashboard
+How to deploy war file
+Port Change
+Tomcat users
+How to add Server in IDE
+
+
+What is Tomcat?
+1. Apache Tomcat is a free & open-source web server.
+2. Used to run Java Web Applications.
+3. Developed by Apache Organization using Java.
+4. Runs on 8080 port by default (can configure that in server.xml file)
+
+How to install Tomcat?
+1. Download installer software and follow the wizard.
+2. Download zip file, extract it and use it.
+
+Tomcat Server Directory Structure
+1. bin - contains binary files to start and stop server.
+2. conf - contains configuration files (eg: server.xml, users.xml).
+3. libs - contains libraries (eg: servlet-api.jar, jsp-api.jar).
+4. webapps - this is the deployment directory for web applications.
+5. logs - server execution logs will be created here.
+6. temp - contains temporary files.
+
+Tomcat Admin Dashboard
+1. Go to localhost:<port specified>
+2. Then login with credentials ,i.e., username and password.
+
+How to deploy war file
+1. Go to deploy war file div.
+2. Select war file.
+3. Click on deploy button.
+
+Port Change:
+1. Go to conf/server.xml
+2. Search port.
+3. Enter your preferred port.
+
+Tomcat users:
+Can configure users and their roles through tomcat-users.xml
+
