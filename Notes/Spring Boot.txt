@@ -1,0 +1,251 @@
+REST API - Representational State Transfer Application Programming Interface.
+Web Services which adhere to the principles of REST API are known as RESTful APIs.
+
+- REST is a software architecture style.
+- It defines as set of constraints to be used for creating web services.
+- The main idea is to treat Networked resources as objects which can be accessed using standard HTTP methods such as GET, POST, PUT and DELETE.
+- REST is an API that follows a set of rules through which applications and servers communicate.
+
+Fundamental elements of REST architecture:
+
+1. Client-Server architecture:
+	- Client and Server act independently.
+	- They can interact with each other.
+	- But each side can be developed and updated independently.
+
+2. Stateless:
+	- Each HTTP request that happens from a client to a server should contain all of the necessary information to  understand and respond to the request.
+	- The server should not store any data between requests which keeps each request isolated and independent.
+
+3. Cacheable:
+	- RESTful architecture allows clients to cache responses.
+	- Responses must implicitly or explicitly define themselves as cacheable or not.
+	- This is to prevent clients from using outdated or inappropriate data in response to further requests.
+
+4. Layered System:
+	- The application can have multiple layers.
+	- The client may or may not be connected to the end server directly.
+	- There are layers such as network, data, load balancer, etc.
+	- The system is divided into multiple layers, where each layer has a specific role.
+
+5. Code on Demand (Optional):
+	- Allows the server to extend the functionality of the client by transferring executable code.
+
+6. Uniform Interface:
+	- Fundamental to the design of any RESTful architecture.
+	- Simplifies and decouples the  architecture.
+	- Enables each part to evolve independently.
+	- Four guiding principles of the Uniform Interface are:
+		i. Identification of Resources.
+		ii. Manipulation of these resources through these representations.
+		iii. Self-descriptive messages.
+		iv. Hypermedia As The Engine Of Application State (HATEOS).
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Spring Rest
+
+1. The Web's architectural principals.
+2. Unique Identification of Resources (URI).
+3. Different resource representation.
+4. Hypermedia / Linking of resources.
+5. Stateless communication.
+6. Standard Methods (GET, PUT, POST, DELETE) and responses (200 OK, 404 Not Found, etc)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Resource Design
+
+1. The resource should always be plural nouns in the API endpoint and if one instance resource should be retrieved, pass the id in the URL:
+	GET/accounts
+	GET/accounts/1
+
+2. In case of nested resources:
+	GET/accounts/1/payments/2
+
+3. With methods such as GET, PUT, POST, PATCH and DELETE, you can provide CRUD (Create, Read, Update, Delete) functionality.
+
+4. Use HTTP methods (aka verbs) to specify what to do with the resources.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HTTP Methods (verbs)
+
+1. GET 		- read data from server, read only operation
+2. POST 	- send data to server to create a new resource, data is included in the body of the request.
+3. PUT 		- update an existing resource or create resource if not exists, new data is included in the body of the request.
+4. DELETE 	- delete a resource specified by the URL.
+5. PATCH 	- partial modification of resources, data is included in the body of the request.
+6. OPTIONS 	- returns the HTTP methods that the server supports for the specified URL, used to check the functionality of a web server.
+7. HEAD		- returns only the header of the response, not the actual data, used to check if a resource exists.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HTTP Status Scopes
+Three digit codes returned by the server as a part of the HTTP response indicating the outcome of the request made by the client.
+First Digit - class of response
+Last two digits do not have any categorization role.
+
+1XX - informational
+2XX - success
+	200 - Ok
+	201 - Created
+	204 - No Content
+3XX - redirection
+	304 - Not Modified (for caching purposes)
+4XX - client error
+	400 - Bad Request, server was unable to understand the request due to bad syntax/payload information.
+	401 - Unauthorized
+	403 - Forbidden
+	404 - Not Found
+5XX - server error
+	500 - Internal Server Error
+	503 - Service Unavailable
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Note: All Web Services are APIs but all APIs are not Web Services.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Postman
+
+- is a popular API client which helps developers build, test and debug HTTP requests.	
+- is used for API development and testing.
+- simplifies each step in the API lifecycle.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Java Records do not require any getters or setters for methods.
+Records are final by default.
+
+DTO - Data Transfer Objects 
+
+(POJO - Plain Old Java Objects) v/s (Records)
+
+Path Variables - value is a part of URI
+Request Params - value is passed as a query parameter
+
+Both are annotations used for extracting values from the URL of an HTTP request.
+They are used in the spring MVC handler methods.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PostgreSQL installation and exploration.
+Connecting PostgreSQL database to IntelliJ.
+YAML	- Yet Another Markup Language or YAML ain't Markup Language (a recursive acronym).
+		- A human readable data serialization language that is often used for writing configuration files.
+		- YAML is for data, not for documents.
+		- YAML is a superset of JSON, hence .json files are valid in YAML.
+Connection type: jdbc (java database connectivity), database type: postgresql, hostname: localhost, port: 5432, database name: demoDB
+To connect to any database, we need a driver.
+
+Spring Data JPA:
+- Transforming a class into an entity.
+- The term entity refers to a java object that is meant to be persisted in a relational database using JPA or a.k.a Java Persistence API.
+- Any entity represents a table in a database.
+- Each instance of an entity represents a row in the table.
+- Each field of the entity represents a column of the table.
+- The state of an entity represents the data in a row.
+
+To map an object to a database with JPA we need to annotate with entity and the class must have a no-args constructor which can be public or protected.
+The class must also contain a field which acts as an identifier.
+Also include the table annotation (good and appreciated practice) to specify the table name if the table is not specified.
+
+Spring Data JPA uses these classes to create sql queries and to convert the result of those queries into objects that you can use in your java code.
+The actual database interaction is performed by the underlying JPA implementation such as hibernate in our case. # jakarta.persistence package
+
+Data persistence refers to the ability of an application or system to store data in a way that it remains accessible and available even after the application or system has been closed or restarted, ensuring data longevity and integrity.
+
+JPQL - Java persistence query language.
+Pagination - A technique used to split large datasets into smaller, manageable pages for efficient display and handling, especially when dealing with large result sets in web applications or APIs.
+
+A Repository is used to interact with the database without writing SQL queries manually.
+	- It is an interface that extends JpaRepository or CrudRepository.
+	- It automatically generates SQL queries for CRUD operations.
+	- It is annotated with @Repository (not always required).
+
+CRUD operations using Spring Data JPA on a PostgreSQL database and create custom methods.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+19-03-2025
+
+Mapping relationships between different entities.
+@JoinColumn
+@JsonManagedReference and @ JsonBackReference
+DTO - Data Transfer Object
+A Design Pattern often used in Software Design.
+The main purpose of a DTO is to encapsulate and Structure data that needs to be transferred across different parts of the system.
+A DTO typically contains only the simple data fields (a.k.a attributes) and lacks the behavior of the model or entity it represents.
+Mapper 	- A simple mechanism to map objects.
+	- Can have multiple representations of the same object.
+DTO play a crucial role in building a RESTful API.
+	- Data Separation: DTO pattern helps to separate the internal domain model from what is exposed through the API. You can change the internal model without exposing sensitive or unnecessary data to the API customers.
+	- Abstraction: DTO provide an abstraction layer. They give you a clear structure of what your API will provide to the client abstracting the complexity of the domain model.
+	- Performance Improvements: Share DTO instead of whole entity, you can control the size of the payload.
+	- Flexibility: Separate from Domain model, allow you to tailor your API response to exactly what the client needs. Even if that does not exactly match your domain model (Multiple representations for the same object).
+	- Versioning: Easier to maintain different versions of API using different sets of DTO.
+Using DTO patterns in Application
+
+Service Layer
+Separates of concerns of handling business logic and application specific operations from the presentation layer (controller) and data access layer (repository).
+Serves as an intermediary between the Controller and Repository, encapsulating the business logic and providing a reusable, modular and testable codebase.
+	1. Business Logic encapsulation: Service layer is responsible for implementing the business logic and performing complex operations required by the API. It encapsulates the logic that goes beyond simple data retrieval or modification such as validation, calculation, transformation or coordination of multiple operations.
+	2. Separation of Concerns within the API architecture: Controllers are responsible for handling incoming HTTP requests and providing appropriate responses while repositories handle the data persistence and retrieval.
+	3. Testing and Maintainability: Mocking and Stubbing the dependencies.
+Mocking dependencies in software testing involves replacing real dependencies (like databases, APIs, or external services) with controlled, simulated versions (mocks) to isolate the code under test and ensure reliable, focused unit tests.
+
+Mocking: Creating a fake object that simulates real behavior dynamically.
+Stubbing: Pre-defining specific responses for method calls on a mock.
+
+
+The Controller Layer must be responsible only for receiving the requests and providing the appropriate responses.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Setting up MySQL and PostgreSQL on local machine.
+2. Create a new spring boot project.
+3. Setup the DB and create a schema (Postgres).
+4. Setup the DB and create a schema (MySQL).
+5. Connect the application to the database (Postgres).
+6. Connect the application to the database (MySQL).
+7. Hibernate VS Spring data JPA.
+8. Annotations used: @Id annotation, @GeneratedValue (Strategy: Auto), @SequenceGenerator, @TableGenerator, @Column and @Table
+9. Transform the Java class to an Entity.
+10. Repository Abstraction is to reduce the amount if boilerplate code needed to implement the DAO (Data Access Object) to interact with the data stores.
+	- A repository is a java interface that is used to abstract the data access layer from the business logic (presentation layer), used to perform CRUD operations and other common database operations such as pagination and sorting.
+	- Repositories are interfaces that extend one of the spring data jpa repository interfaces such as the JPARepository, etc.
+11. int is by default zero; Integer is by default null.
+12. Type Systems:
+	are a set of rules that govern how a programming language assigns types to variables, expressions, functions, etc.
+	help prevent type-related errors and ensure correctness.
+	i. Statically v/s dynamically typed.
+	ii. Strong v/s Weak typed.
+	iii. Explicitly v/s Implicitly Typed.
+	iv. Gradually v/s Optionally Typed.
+13. Lombok is a tool to reduce boilerplate code.
+14. Spring Data JPA is an abstraction layer on top of JPA (Java Persistence API) to reduce amount of boilerplate code required to implement Data Access Object (DAO).
+15. DAO vs DTO
+	- DAO is a design pattern used to separate the database interaction logic from the rest of the application.
+	- DTO is used to as a container to transfer data between different layers of an application.
+
+	- DAO provides a platform to perform CRUD operations on the database.
+	- DTO does not contain any business logic and helps in reducing unnecessary data exposure and improving performance.
+16. JPA: specification that facilitates Object Relational Mapping (ORM) to manage relational data in java applications.
+17. ORM: Object Relational Mapping is a technique used to interact with RDBMS using OOP languages. ORM maps tables to classes and facilitates CRUD operations
+18. Worked a bit on Data Cleaning (off topic)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Sharding
+Extract, Load, Transform (ELT)
+Data Lake - A data lake is a centralized repository for a huge amount of data.
+Data Warehouse
+Data Lakehouse
+
+Annotations: @Builder @Data @NoArgsConstructor @AllArgsConstructor @Builder @Entity
+Using Builder to create object and insert into database using CommandLineRunner
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+databricks medallion arch
+dms
+
+1. no data access (aws)
+2. notebooks weren't running 
+3. kt - knowledge transfer
+4. 
+
+
+
+

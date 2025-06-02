@@ -1,0 +1,213 @@
+UML - Unified Modeling Language
+
+-> Define, Design, Visualize and Document Software System Artifacts or Business Models.
+-> UML is a set of best engineering practices that has proven to be effective in modeling large and complex systems.
+-> UML is a very important part of Object-Oriented Software Development.
+-> UML uses graphical notations to express the software project's design.
+-> UML helps teams to communicate, explore and validate software architectural designs.
+-> Purpose of UML is to provide standardized annotations that can be used by all object-oriented methods and to select and integrate best elements of the precursor notations.
+
+Behavior Diagram - dynamic components.
+Structure Diagram - static components.
+
+Goal:
+1. Class Diagram. (Structure)	
+2. Entity-Relationship (ER) Diagrams. ()
+3. Flow Diagrams. 
+4. Sequence Diagrams. (Behavior)
+5. Use-Case Diagrams. (Behavior)
+6. System Architecture. 
+
+------------------------------
+Class Diagrams:
+
+-> central modeling technique.
+-> used in almost all object-oriented methods.
+-> describes the types of objects in the system and the different kinds of static relationships between them.
+
+A class is a template for creating objects and as well as representing objects' initial state attributes and behavior methods.
+Each attribute has its own type, each method has its own signature.
+
++ public 
+- private
+# protected
+~ package-local
+
+Class diagrams are used at different stages of the software development lifecycle, hence we have three different perspective or levels of specifications:
+	1. Conceptual Perspective:
+		class diagrams describe entities of the real world.
+		the diagram represents the concepts in the domain, these concepts relate to classes that implement them.
+		conceptual perspective is considered language independent.
+	2. Specification Perspective:
+		describe abstractions of software or components with specification and interfaces but without any reference to a specific implementation.
+	3. Implementation Perspective:
+		a description of software implementations in a particular technology or programming language.
+		depict actual software implementation.-
+
+Relationships:
+	1. Association - connect classes
+	2. Inheritance (Generalization) - schematic representation of the relationship between the parent class and its descendants.
+	3. Implementation (Realization) - relationships between interfaces and objects that implement those interfaces.
+	4. Dependency - When an object of one class uses an object of another class in its method and this object is not stored in any field.
+			special case of association.
+			changes in one class will inexorably entail changes in other class.
+	5. Aggregation - when one class is a composite part of another.
+	6. Composition - type of aggregation but here, the classes which form the aggregator class are destroyed when the aggregator class is destroyed.
+
+------------------------------
+Use-case Diagram:
+
+-> describes the functional requirements of a system in terms of use cases.
+-> model of intended functionality of the system use cases and its environment actors.
+-> use-cases allow us to link what we need from the system with how the system meets those needs.
+
+-> summarize relationships between use-cases, actors and systems.
+-> represent only the functional requirements of the system.
+-> constructed at an early stage of development.
+
+1. specify the context of a system.
+2. capture the requirements of a system.
+3. validate system architecture.
+4. drive implementation and generate test cases.
+
+Actor - the one who interacts with the system or one who creates a use case.
+	actors trigger use-cases.
+	actors have some expectations from use-cases.
+
+Use-case - a system function or a process that can be either automatic or manual.
+	   each actor must be associated with some use-case while some use-cases might not be associated with actors.
+	   use-cases determine the expected behavior (what should happen) but do not tell how (how should it be done).
+
+to design the system from the perspective of the end user.
+
+actors are associated with use-cases via communication link.
+use-cases can have relationships among them.
+
+Tips for constructing Use-case diagrams:
+	1. Always structure and organize a use case diagram from the perspective of actors.
+	2. Use cases should start off simple and at the highest view possible.
+	3. Use case diagrams are based on functionality and should focus on the "what", not on the "how".
+
+------------------------------
+Sequence Diagram:
+
+-> models the interaction of objects based on a time sequence.
+-> it shows how objects interact with each other in a particular use case.
+
+-> interaction diagrams that detail how the operations are performed.
+-> capture the interaction between objects in the context of collaboration and show how elements interact over time and are organized with objects (horizontally) and time (vertically).
+
+Class and Object diagrams are static model views, but interaction diagrams are dynamic.
+
+Actor:  A type of role played by the instance that interacts with the subject.
+	Represents the role played by users, external equipment or other actors.
+
+Life Line: Represents an individual participant in the interaction and displays the passage of time.
+
+Activation: The thin rectangle on the lifeline indicates the period during which the element performs an operation.
+	    Top and Bottom of the rectangle are aligned with the start and end of a specific function.
+
+Call Message: Used to call procedures, execute operations, or designate individual nested control flows.
+	      One end of the arrow always touches the control focus or lifeline of the client object that triggers the message.
+	      The tip of the arrow points at the lifeline of the object that receives the message and takes action as a result. At the same time, this object also often receives a control focus, becoming active.
+Types of call messages:
+1. Synchronous: Client sends a request and waits for response.
+2. Asynchronous message: Client sends request and continues working. Does not wait for response.
+
+Return message: Return message identifies the specific communication between the lifelines of an interaction and represents the transfer of information to the caller of the corresponding message.
+
+Self Message: A participant sends a command or a message to itself.
+
+Create Message: Creation of a participant.
+Destroy Message: Deletion of a participant.
+
+Note (Comments): similar to comments in programming languages.
+
+Focus of Control: Represents a period during which an element is performing some operation.
+
+Sequence Fragments: alt, opt, loop, break, par, sec, strict , critical, ignore, consider, assert.
+
+------------------------------
+
+Entity-Relationship Diagram:
+
+conceptual view and logical representation of system.
+a visual representation that illustrates how "entities" (like people, objects, or concepts) relate to each other within a system, commonly used to design or debug relational databases.
+a systematic way of describing and defining a business process.
+to represent entities, attributes and relationships graphically.
+
+Entities:
+Represent real-world objects or concepts that store data (e.g., a customer, a product, an order).
+Entities may have various properties or attributes that characterize them.
+An entity maybe a person, an object, an event, etc.
+
+Attributes:
+Describe the characteristics of an entity (e.g., customer ID, product name, order date).
+
+Types of Attributes:
+1. Single (eclipse) and Multi-valued (double eclipse).
+2. Simple - Cannot be divided further; eg: age (eclipse) and Composite - composed of more than one value; eg: name (eclipse).
+3. Stored - fixed value, cannot be derived; eg: DoB (eclipse) and Derived - value is unknown, needs to be derived; eg: deriving student's age from DoB (dotted eclipse).
+4. Key - used to uniquely identify each and every row, cannot accept duplicate values (eclipse with underline) and Non-key - other attributes (eclipse).
+5. Complex - composite + multi-value.
+
+Relationship:
+Describes the interaction among entities. 
+Show how entities are connected to each other (e.g., a customer places an order, a product belongs to a category). 
+
+Types of relationships:
+1. One-to-one (1-1) - e.g.: Student and Roll No. (A student has only one roll no. and a roll no. belongs to only one student).
+2. Many-to-one (M-1) - e.g.: A student may own many notebooks but a notebook must belong to a single student.
+3. One-to-many (1-M) - e.g.: Student and Dept. (A student has only one dept. but one dept. can contain many students).
+3. Many-to-many (M-N) - e.g.: Student and Teacher (A student can have many teachers and a teacher can also have many students).
+
+Representations:
+1. Entity - Square
+2. Attribute - Eclipse
+3. Relationship - Diamond
+
+Cardinality - No. of relationships of an entity.
+
+------------------------------
+
+Data Flow Diagram 
+
+a.k.a Bubble Chart
+graphical representation which focuses on movement of data between external entities and processes, and between processes and data stores.
+DFD provides an overview of:
+the data a sytem processes
+transformation performed
+what data is stored
+what results are produced
+communication tool between users, analysts and system designers.
+
+DFD elements:
+
+1. Source / Sinks (Entities) (Rectangle)
+	Source - Entity that supplies data to the system.
+	Sink - Entity that receives data from the system.
+2. Data Flow (lines with arrow heads)
+3. Process (circle)
+4. Data Stores / Database (Parallel Lines)
+
+Rules about data flow:
+
+Data can flow from:
+	1. Entity to Process.
+	2. Process to external entity.
+	3. Process to store and back.
+	4. Process to process.
+
+Data cannot flow from:
+	1. External entity to external entity.
+	2. External entity to store.
+	3. Store to external entity.
+	4. Store to store.
+
+Decomposition of DFD:
+Iterative process of exploding DFD into different level to create more details.
+These levels are linked together in a hierarchy.
+
+Level 0: 
+Level 1: 
+level 2: 

@@ -1,0 +1,1467 @@
+Microsoft Windows [Version 10.0.26100.3194]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\tabish-practice\git-learning>git config /help
+error: key does not contain a section: /help
+
+C:\tabish-practice\git-learning>git config /?
+error: key does not contain a section: /?
+
+C:\tabish-practice\git-learning>git config \?
+error: key does not contain a section: \?
+
+C:\tabish-practice\git-learning>git config
+error: no action specified
+
+C:\tabish-practice\git-learning>git init
+Initialized empty Git repository in C:/tabish-practice/git-learning/.git/
+
+C:\tabish-practice\git-learning>git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+C:\tabish-practice\git-learning>pwd
+'pwd' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\tabish-practice\git-learning>cd
+C:\tabish-practice\git-learning
+
+C:\tabish-practice\git-learning>git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Disable this message with "git config set advice.addEmptyPathspec false"
+
+C:\tabish-practice\git-learning>git add "C:\Users\PC\Downloads\1.mp3"
+fatal: C:\Users\PC\Downloads\1.mp3: 'C:\Users\PC\Downloads\1.mp3' is outside repository at 'C:/tabish-practice/git-learning'
+
+C:\tabish-practice\git-learning>git add hello.txt
+fatal: pathspec 'hello.txt' did not match any files
+
+C:\tabish-practice\git-learning>git add README.md
+fatal: pathspec 'README.md' did not match any files
+
+C:\tabish-practice\git-learning>git add "C:\Users\PC\Downloads\1.mp3"
+fatal: C:\Users\PC\Downloads\1.mp3: 'C:\Users\PC\Downloads\1.mp3' is outside repository at 'C:/tabish-practice/git-learning'
+
+C:\tabish-practice\git-learning>mv fatal: C:\Users\PC\Downloads\1.mp3: 'C:\Users\PC\Downloads\1.mp3' is outside repository at 'C:
+
+C:\tabish-practice\git-learning>copy "C:\Users\PC\Downloads\1.mp3" "C:\tabish-practice\git-learning\"
+        1 file(s) copied.
+
+C:\tabish-practice\git-learning>git add 1.mp3
+
+C:\tabish-practice\git-learning>git commit -m "Added 1.mp3"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'PC@Tabish.(none)')
+
+C:\tabish-practice\git-learning>git config --global user.email "tabish.ansari@nonstopio.com"
+
+C:\tabish-practice\git-learning>git config --global user.name "Tabish Ali Ansari"
+
+C:\tabish-practice\git-learning>git commit -m "Added 1.mp3"
+[master (root-commit) bf943e4] Added 1.mp3
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1.mp3
+
+C:\tabish-practice\git-learning>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\tabish-practice\git-learning>copy "C:\Users\PC\Downloads\2.mp3" "C:\tabish-practice\git-learning\"
+        1 file(s) copied.
+
+C:\tabish-practice\git-learning>copy "C:\Users\PC\Downloads\3.mp3" "C:\tabish-practice\git-learning\"
+        1 file(s) copied.
+
+C:\tabish-practice\git-learning>copy "C:\Users\PC\Downloads\4.mp3" "C:\tabish-practice\git-learning\"
+        1 file(s) copied.
+
+C:\tabish-practice\git-learning>copy "C:\Users\PC\Downloads\4.mp3" "C:\tabish-practice\git-learning\^Z^Z
+
+C:\tabish-practice\git-learning>copy "C:\Users\PC\Downloads\5.mp3" "C:\tabish-practice\git-learning\"
+        1 file(s) copied.
+
+C:\tabish-practice\git-learning>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        2.mp3
+        3.mp3
+        4.mp3
+        5.mp3
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\tabish-practice\git-learning>git add "2.mp3", "3.mp3", "4.mp3", "5.mp3"
+fatal: pathspec '2.mp3,' did not match any files
+
+C:\tabish-practice\git-learning>git add "2.mp3"
+
+C:\tabish-practice\git-learning>git add "3.mp3"
+
+C:\tabish-practice\git-learning>git add *.mp3
+
+C:\tabish-practice\git-learning>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   2.mp3
+        new file:   3.mp3
+        new file:   4.mp3
+        new file:   5.mp3
+
+
+C:\tabish-practice\git-learning>git commit -m "Added all mp3 files"
+[master 1216a92] Added all mp3 files
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2.mp3
+ create mode 100644 3.mp3
+ create mode 100644 4.mp3
+ create mode 100644 5.mp3
+
+C:\tabish-practice\git-learning>mkdir Audio/
+The syntax of the command is incorrect.
+
+C:\tabish-practice\git-learning>mkdir Audio
+
+C:\tabish-practice\git-learning>move *.mp3 Audio/
+C:\tabish-practice\git-learning\1.mp3
+C:\tabish-practice\git-learning\2.mp3
+C:\tabish-practice\git-learning\3.mp3
+C:\tabish-practice\git-learning\4.mp3
+C:\tabish-practice\git-learning\5.mp3
+        5 file(s) moved.
+
+C:\tabish-practice\git-learning>git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    1.mp3
+        deleted:    2.mp3
+        deleted:    3.mp3
+        deleted:    4.mp3
+        deleted:    5.mp3
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Audio/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\tabish-practice\git-learning>git add Audio
+
+C:\tabish-practice\git-learning>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Audio/1.mp3
+        new file:   Audio/2.mp3
+        new file:   Audio/3.mp3
+        new file:   Audio/4.mp3
+        new file:   Audio/5.mp3
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    1.mp3
+        deleted:    2.mp3
+        deleted:    3.mp3
+        deleted:    4.mp3
+        deleted:    5.mp3
+
+
+C:\tabish-practice\git-learning>git commit -m "Created a folder name Audio and moved all .mp3 files into it"
+[master fbb414a] Created a folder name Audio and moved all .mp3 files into it
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Audio/1.mp3
+ create mode 100644 Audio/2.mp3
+ create mode 100644 Audio/3.mp3
+ create mode 100644 Audio/4.mp3
+ create mode 100644 Audio/5.mp3
+
+C:\tabish-practice\git-learning>git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    1.mp3
+        deleted:    2.mp3
+        deleted:    3.mp3
+        deleted:    4.mp3
+        deleted:    5.mp3
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\tabish-practice\git-learning>git rm *.mp3
+rm '1.mp3'
+rm '2.mp3'
+rm '3.mp3'
+rm '4.mp3'
+rm '5.mp3'
+rm 'Audio/1.mp3'
+rm 'Audio/2.mp3'
+rm 'Audio/3.mp3'
+rm 'Audio/4.mp3'
+rm 'Audio/5.mp3'
+
+C:\tabish-practice\git-learning>git log --oneline
+fbb414a (HEAD -> master) Created a folder name Audio and moved all .mp3 files into it
+1216a92 Added all mp3 files
+bf943e4 Added 1.mp3
+
+C:\tabish-practice\git-learning>git restore --staged .
+
+C:\tabish-practice\git-learning>git restore .
+
+C:\tabish-practice\git-learning>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\tabish-practice\git-learning>cd
+C:\tabish-practice\git-learning
+
+C:\tabish-practice\git-learning>del *.mp3
+
+C:\tabish-practice\git-learning>git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    1.mp3
+        deleted:    2.mp3
+        deleted:    3.mp3
+        deleted:    4.mp3
+        deleted:    5.mp3
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\tabish-practice\git-learning>git add .
+
+C:\tabish-practice\git-learning>git commit -m "Deleted all audio files outside the Audi folder"
+[master 84538e0] Deleted all audio files outside the Audi folder
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 1.mp3
+ delete mode 100644 2.mp3
+ delete mode 100644 3.mp3
+ delete mode 100644 4.mp3
+ delete mode 100644 5.mp3
+
+C:\tabish-practice\git-learning>git status\
+git: 'status\' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+C:\tabish-practice\git-learning>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\tabish-practice\git-learning>dir
+ Volume in drive C is Windows-SSD
+ Volume Serial Number is 2A5D-0CF7
+
+ Directory of C:\tabish-practice\git-learning
+
+03/10/2025  01:14 PM    <DIR>          .
+03/10/2025  12:33 PM    <DIR>          ..
+03/10/2025  01:13 PM    <DIR>          Audio
+               0 File(s)              0 bytes
+               3 Dir(s)  416,586,514,432 bytes free
+
+C:\tabish-practice\git-learning>dir /s
+ Volume in drive C is Windows-SSD
+ Volume Serial Number is 2A5D-0CF7
+
+ Directory of C:\tabish-practice\git-learning
+
+03/10/2025  01:14 PM    <DIR>          .
+03/10/2025  12:33 PM    <DIR>          ..
+03/10/2025  01:13 PM    <DIR>          Audio
+               0 File(s)              0 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git
+
+03/10/2025  01:14 PM    <DIR>          ..
+03/10/2025  01:15 PM                48 COMMIT_EDITMSG
+03/10/2025  12:37 PM               130 config
+03/10/2025  12:37 PM                73 description
+03/10/2025  12:37 PM                23 HEAD
+03/10/2025  12:37 PM    <DIR>          hooks
+03/10/2025  01:15 PM               495 index
+03/10/2025  12:37 PM    <DIR>          info
+03/10/2025  01:04 PM    <DIR>          logs
+03/10/2025  01:15 PM    <DIR>          objects
+03/10/2025  12:37 PM    <DIR>          refs
+               5 File(s)            769 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\hooks
+
+03/10/2025  12:37 PM    <DIR>          .
+03/10/2025  12:37 PM               478 applypatch-msg.sample
+03/10/2025  12:37 PM               896 commit-msg.sample
+03/10/2025  12:37 PM             4,726 fsmonitor-watchman.sample
+03/10/2025  12:37 PM               189 post-update.sample
+03/10/2025  12:37 PM               424 pre-applypatch.sample
+03/10/2025  12:37 PM             1,649 pre-commit.sample
+03/10/2025  12:37 PM               416 pre-merge-commit.sample
+03/10/2025  12:37 PM             1,374 pre-push.sample
+03/10/2025  12:37 PM             4,898 pre-rebase.sample
+03/10/2025  12:37 PM               544 pre-receive.sample
+03/10/2025  12:37 PM             1,492 prepare-commit-msg.sample
+03/10/2025  12:37 PM             2,783 push-to-checkout.sample
+03/10/2025  12:37 PM             2,308 sendemail-validate.sample
+03/10/2025  12:37 PM             3,650 update.sample
+              14 File(s)         25,827 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\info
+
+03/10/2025  12:37 PM    <DIR>          .
+03/10/2025  12:37 PM               240 exclude
+               1 File(s)            240 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\logs
+
+03/10/2025  01:04 PM    <DIR>          .
+03/10/2025  01:15 PM               771 HEAD
+03/10/2025  01:04 PM    <DIR>          refs
+               1 File(s)            771 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\logs\refs
+
+03/10/2025  01:04 PM    <DIR>          .
+03/10/2025  01:04 PM    <DIR>          ..
+03/10/2025  01:04 PM    <DIR>          heads
+               0 File(s)              0 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\logs\refs\heads
+
+03/10/2025  01:04 PM    <DIR>          .
+03/10/2025  01:04 PM    <DIR>          ..
+03/10/2025  01:15 PM               771 master
+               1 File(s)            771 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects
+
+03/10/2025  01:15 PM    <DIR>          .
+03/10/2025  01:06 PM    <DIR>          07
+03/10/2025  01:08 PM    <DIR>          12
+03/10/2025  12:48 PM    <DIR>          1f
+03/10/2025  01:06 PM    <DIR>          28
+03/10/2025  01:08 PM    <DIR>          30
+03/10/2025  01:10 PM    <DIR>          31
+03/10/2025  01:06 PM    <DIR>          3c
+03/10/2025  01:15 PM    <DIR>          70
+03/10/2025  01:06 PM    <DIR>          82
+03/10/2025  01:15 PM    <DIR>          84
+03/10/2025  12:48 PM    <DIR>          9d
+03/10/2025  01:04 PM    <DIR>          bf
+03/10/2025  01:10 PM    <DIR>          fb
+03/10/2025  12:37 PM    <DIR>          info
+03/10/2025  12:37 PM    <DIR>          pack
+               0 File(s)              0 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\07
+
+03/10/2025  01:06 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:10 PM         1,006,232 9fa11e8b078e84ec13b3d58e7627d4ae5e91ea
+               1 File(s)      1,006,232 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\12
+
+03/10/2025  01:08 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:08 PM               174 16a92ac8022299a710590ff1d389370e58a121
+               1 File(s)            174 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\1f
+
+03/10/2025  12:48 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:10 PM           501,353 a8559525c5c06f503ea452f62afc5e1be7dabc
+               1 File(s)        501,353 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\28
+
+03/10/2025  01:06 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:10 PM           777,600 1facdf55e51896a9d01601a143b134d98bdd21
+               1 File(s)        777,600 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\30
+
+03/10/2025  01:08 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:15 PM               155 adb52499bd42a65323ebc5731d13b586398d41
+               1 File(s)            155 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\31
+
+03/10/2025  01:10 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:10 PM               186 633b23fe924f2d52388c7cbc4318dc8ad3d6cd
+               1 File(s)            186 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\3c
+
+03/10/2025  01:06 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:10 PM           644,348 eadf493a888af376ffbb445468430a0b72ef33
+               1 File(s)        644,348 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\70
+
+03/10/2025  01:15 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:15 PM                47 769d8fd8f56c5afb6a99891a66142dfeac8e5a
+               1 File(s)             47 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\82
+
+03/10/2025  01:06 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:10 PM           533,807 85879a15160c3d07de78dcab18340e6070f2d4
+               1 File(s)        533,807 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\84
+
+03/10/2025  01:15 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:15 PM               192 538e0e277d10593ef92d2642eeaced5cf46617
+               1 File(s)            192 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\9d
+
+03/10/2025  12:48 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  12:48 PM                50 dd48f29993804c8d0b6badb57cae2293cfc9e4
+               1 File(s)             50 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\bf
+
+03/10/2025  01:04 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:04 PM               138 943e42990f8dbc1ed5570cc62ac6e0d6dda8de
+               1 File(s)            138 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\fb
+
+03/10/2025  01:10 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:10 PM               201 b414a1b039789200086beca7d0a99fdfebb640
+               1 File(s)            201 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\info
+
+03/10/2025  12:37 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\pack
+
+03/10/2025  12:37 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\refs
+
+03/10/2025  12:37 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          heads
+03/10/2025  12:37 PM    <DIR>          tags
+               0 File(s)              0 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\refs\heads
+
+03/10/2025  01:15 PM    <DIR>          .
+03/10/2025  12:37 PM    <DIR>          ..
+03/10/2025  01:15 PM                41 master
+               1 File(s)             41 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\refs\tags
+
+03/10/2025  12:37 PM    <DIR>          .
+03/10/2025  12:37 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\tabish-practice\git-learning\Audio
+
+03/10/2025  01:13 PM    <DIR>          .
+03/10/2025  01:14 PM    <DIR>          ..
+03/10/2025  01:13 PM           510,328 1.mp3
+03/10/2025  01:13 PM         1,022,328 2.mp3
+03/10/2025  01:13 PM           789,106 3.mp3
+03/10/2025  01:13 PM           655,360 4.mp3
+03/10/2025  01:13 PM           542,929 5.mp3
+               5 File(s)      3,520,051 bytes
+
+     Total Files Listed:
+              41 File(s)      7,012,953 bytes
+              73 Dir(s)  416,586,596,352 bytes free
+
+C:\tabish-practice\git-learning>cd
+C:\tabish-practice\git-learning
+
+C:\tabish-practice\git-learning>dir
+ Volume in drive C is Windows-SSD
+ Volume Serial Number is 2A5D-0CF7
+
+ Directory of C:\tabish-practice\git-learning
+
+03/10/2025  01:14 PM    <DIR>          .
+03/10/2025  12:33 PM    <DIR>          ..
+03/10/2025  01:13 PM    <DIR>          Audio
+               0 File(s)              0 bytes
+               3 Dir(s)  416,586,350,592 bytes free
+
+C:\tabish-practice\git-learning>dir /s
+ Volume in drive C is Windows-SSD
+ Volume Serial Number is 2A5D-0CF7
+
+ Directory of C:\tabish-practice\git-learning
+
+03/10/2025  01:14 PM    <DIR>          .
+03/10/2025  12:33 PM    <DIR>          ..
+03/10/2025  01:13 PM    <DIR>          Audio
+               0 File(s)              0 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git
+
+03/10/2025  01:14 PM    <DIR>          ..
+03/10/2025  01:15 PM                48 COMMIT_EDITMSG
+03/10/2025  12:37 PM               130 config
+03/10/2025  12:37 PM                73 description
+03/10/2025  12:37 PM                23 HEAD
+03/10/2025  12:37 PM    <DIR>          hooks
+03/10/2025  01:15 PM               495 index
+03/10/2025  12:37 PM    <DIR>          info
+03/10/2025  01:04 PM    <DIR>          logs
+03/10/2025  01:15 PM    <DIR>          objects
+03/10/2025  12:37 PM    <DIR>          refs
+               5 File(s)            769 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\hooks
+
+03/10/2025  12:37 PM    <DIR>          .
+03/10/2025  12:37 PM               478 applypatch-msg.sample
+03/10/2025  12:37 PM               896 commit-msg.sample
+03/10/2025  12:37 PM             4,726 fsmonitor-watchman.sample
+03/10/2025  12:37 PM               189 post-update.sample
+03/10/2025  12:37 PM               424 pre-applypatch.sample
+03/10/2025  12:37 PM             1,649 pre-commit.sample
+03/10/2025  12:37 PM               416 pre-merge-commit.sample
+03/10/2025  12:37 PM             1,374 pre-push.sample
+03/10/2025  12:37 PM             4,898 pre-rebase.sample
+03/10/2025  12:37 PM               544 pre-receive.sample
+03/10/2025  12:37 PM             1,492 prepare-commit-msg.sample
+03/10/2025  12:37 PM             2,783 push-to-checkout.sample
+03/10/2025  12:37 PM             2,308 sendemail-validate.sample
+03/10/2025  12:37 PM             3,650 update.sample
+              14 File(s)         25,827 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\info
+
+03/10/2025  12:37 PM    <DIR>          .
+03/10/2025  12:37 PM               240 exclude
+               1 File(s)            240 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\logs
+
+03/10/2025  01:04 PM    <DIR>          .
+03/10/2025  01:15 PM               771 HEAD
+03/10/2025  01:04 PM    <DIR>          refs
+               1 File(s)            771 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\logs\refs
+
+03/10/2025  01:04 PM    <DIR>          .
+03/10/2025  01:04 PM    <DIR>          ..
+03/10/2025  01:04 PM    <DIR>          heads
+               0 File(s)              0 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\logs\refs\heads
+
+03/10/2025  01:04 PM    <DIR>          .
+03/10/2025  01:04 PM    <DIR>          ..
+03/10/2025  01:15 PM               771 master
+               1 File(s)            771 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects
+
+03/10/2025  01:15 PM    <DIR>          .
+03/10/2025  01:06 PM    <DIR>          07
+03/10/2025  01:08 PM    <DIR>          12
+03/10/2025  12:48 PM    <DIR>          1f
+03/10/2025  01:06 PM    <DIR>          28
+03/10/2025  01:08 PM    <DIR>          30
+03/10/2025  01:10 PM    <DIR>          31
+03/10/2025  01:06 PM    <DIR>          3c
+03/10/2025  01:15 PM    <DIR>          70
+03/10/2025  01:06 PM    <DIR>          82
+03/10/2025  01:15 PM    <DIR>          84
+03/10/2025  12:48 PM    <DIR>          9d
+03/10/2025  01:04 PM    <DIR>          bf
+03/10/2025  01:10 PM    <DIR>          fb
+03/10/2025  12:37 PM    <DIR>          info
+03/10/2025  12:37 PM    <DIR>          pack
+               0 File(s)              0 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\07
+
+03/10/2025  01:06 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:10 PM         1,006,232 9fa11e8b078e84ec13b3d58e7627d4ae5e91ea
+               1 File(s)      1,006,232 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\12
+
+03/10/2025  01:08 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:08 PM               174 16a92ac8022299a710590ff1d389370e58a121
+               1 File(s)            174 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\1f
+
+03/10/2025  12:48 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:10 PM           501,353 a8559525c5c06f503ea452f62afc5e1be7dabc
+               1 File(s)        501,353 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\28
+
+03/10/2025  01:06 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:10 PM           777,600 1facdf55e51896a9d01601a143b134d98bdd21
+               1 File(s)        777,600 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\30
+
+03/10/2025  01:08 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:15 PM               155 adb52499bd42a65323ebc5731d13b586398d41
+               1 File(s)            155 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\31
+
+03/10/2025  01:10 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:10 PM               186 633b23fe924f2d52388c7cbc4318dc8ad3d6cd
+               1 File(s)            186 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\3c
+
+03/10/2025  01:06 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:10 PM           644,348 eadf493a888af376ffbb445468430a0b72ef33
+               1 File(s)        644,348 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\70
+
+03/10/2025  01:15 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:15 PM                47 769d8fd8f56c5afb6a99891a66142dfeac8e5a
+               1 File(s)             47 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\82
+
+03/10/2025  01:06 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:10 PM           533,807 85879a15160c3d07de78dcab18340e6070f2d4
+               1 File(s)        533,807 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\84
+
+03/10/2025  01:15 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:15 PM               192 538e0e277d10593ef92d2642eeaced5cf46617
+               1 File(s)            192 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\9d
+
+03/10/2025  12:48 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  12:48 PM                50 dd48f29993804c8d0b6badb57cae2293cfc9e4
+               1 File(s)             50 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\bf
+
+03/10/2025  01:04 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:04 PM               138 943e42990f8dbc1ed5570cc62ac6e0d6dda8de
+               1 File(s)            138 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\fb
+
+03/10/2025  01:10 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+03/10/2025  01:10 PM               201 b414a1b039789200086beca7d0a99fdfebb640
+               1 File(s)            201 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\info
+
+03/10/2025  12:37 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\objects\pack
+
+03/10/2025  12:37 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\refs
+
+03/10/2025  12:37 PM    <DIR>          .
+03/10/2025  01:15 PM    <DIR>          heads
+03/10/2025  12:37 PM    <DIR>          tags
+               0 File(s)              0 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\refs\heads
+
+03/10/2025  01:15 PM    <DIR>          .
+03/10/2025  12:37 PM    <DIR>          ..
+03/10/2025  01:15 PM                41 master
+               1 File(s)             41 bytes
+
+ Directory of C:\tabish-practice\git-learning\.git\refs\tags
+
+03/10/2025  12:37 PM    <DIR>          .
+03/10/2025  12:37 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\tabish-practice\git-learning\Audio
+
+03/10/2025  01:13 PM    <DIR>          .
+03/10/2025  01:14 PM    <DIR>          ..
+03/10/2025  01:13 PM           510,328 1.mp3
+03/10/2025  01:13 PM         1,022,328 2.mp3
+03/10/2025  01:13 PM           789,106 3.mp3
+03/10/2025  01:13 PM           655,360 4.mp3
+03/10/2025  01:13 PM           542,929 5.mp3
+               5 File(s)      3,520,051 bytes
+
+     Total Files Listed:
+              41 File(s)      7,012,953 bytes
+              73 Dir(s)  416,586,330,112 bytes free
+
+C:\tabish-practice\git-learning>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\tabish-practice\git-learning>copy "C:\tabish-practice\script.txt" "C:\tabish-practice\git-learning"
+        1 file(s) copied.
+
+C:\tabish-practice\git-learning>copy "C:\Users\PC\Downloads\TabishAliAnsari.mp4" "C:\tabish-practice\git-learning"
+        1 file(s) copied.
+
+C:\tabish-practice\git-learning>copy "C:\Users\PC\Downloads\TabishAliAnsari.pptx" "C:\tabish-practice\git-learning"
+        1 file(s) copied.
+
+C:\tabish-practice\git-learning>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        TabishAliAnsari.pptx
+        script.txt
+        video.mp4
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\tabish-practice\git-learning>git add *
+
+C:\tabish-practice\git-learning>git commit -m "Added ppt, script and final video"
+[master 44194ee] Added ppt, script and final video
+ 3 files changed, 29 insertions(+)
+ create mode 100644 TabishAliAnsari.pptx
+ create mode 100644 script.txt
+ create mode 100644 video.mp4
+
+C:\tabish-practice\git-learning>git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    TabishAliAnsari.pptx
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        presentation.pptx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\tabish-practice\git-learning>git add presentation.pptx
+
+C:\tabish-practice\git-learning>git commit -m "Renamed TabishAliAnsari.pptx to presentation.pptx"
+[master 72d8318] Renamed TabishAliAnsari.pptx to presentation.pptx
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 presentation.pptx
+
+C:\tabish-practice\git-learning>echo # French Learning > README.md
+
+C:\tabish-practice\git-learning>git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    TabishAliAnsari.pptx
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\tabish-practice\git-learning>git add README.md
+
+C:\tabish-practice\git-learning>git commit -m "Added README.md file"
+[master 81cc548] Added README.md file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+C:\tabish-practice\git-learning>notepad README.md
+
+C:\tabish-practice\git-learning>git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        deleted:    TabishAliAnsari.pptx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\tabish-practice\git-learning>git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Disable this message with "git config set advice.addEmptyPathspec false"
+
+C:\tabish-practice\git-learning>git add .
+
+C:\tabish-practice\git-learning>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+        deleted:    TabishAliAnsari.pptx
+
+
+C:\tabish-practice\git-learning>git commit -m "Modified README.md"
+[master 666ffd9] Modified README.md
+ 2 files changed, 1 insertion(+)
+ delete mode 100644 TabishAliAnsari.pptx
+
+C:\tabish-practice\git-learning>git log
+commit 666ffd9e2d715631d4d8684c2efd15b72d64b222 (HEAD -> master)
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:37:11 2025 +0530
+
+    Modified README.md
+
+commit 81cc5486715da5399b647b0d4751dccfe515c8b4
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:35:20 2025 +0530
+
+    Added README.md file
+
+commit 72d831851f5fdd4821b3e224c4b45378897f0dad
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:33:28 2025 +0530
+
+    Renamed TabishAliAnsari.pptx to presentation.pptx
+
+commit 44194ee46464af2a466083bfd22058318bd7484c
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:32:34 2025 +0530
+
+    Added ppt, script and final video
+
+commit 84538e0e277d10593ef92d2642eeaced5cf46617
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:15:14 2025 +0530
+
+    Deleted all audio files outside the Audi folder
+
+commit fbb414a1b039789200086beca7d0a99fdfebb640
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:10:51 2025 +0530
+
+    Created a folder name Audio and moved all .mp3 files into it
+
+commit 1216a92ac8022299a710590ff1d389370e58a121
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:08:22 2025 +0530
+
+    Added all mp3 files
+
+commit bf943e42990f8dbc1ed5570cc62ac6e0d6dda8de
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:04:40 2025 +0530
+
+    Added 1.mp3
+(END)
+commit 44194ee46464af2a466083bfd22058318bd7484c
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:32:34 2025 +0530
+
+    Added ppt, script and final video
+
+commit 84538e0e277d10593ef92d2642eeaced5cf46617
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:15:14 2025 +0530
+
+    Deleted all audio files outside the Audi folder
+
+commit fbb414a1b039789200086beca7d0a99fdfebb640
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:10:51 2025 +0530
+
+    Created a folder name Audio and moved all .mp3 files into it
+
+commit 1216a92ac8022299a710590ff1d389370e58a121
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:08:22 2025 +0530
+
+    Added all mp3 files
+
+commit bf943e42990f8dbc1ed5570cc62ac6e0d6dda8de
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:04:40 2025 +0530
+
+    Added 1.mp3
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+(END)
+commit 44194ee46464af2a466083bfd22058318bd7484c
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:32:34 2025 +0530
+
+    Added ppt, script and final video
+
+commit 84538e0e277d10593ef92d2642eeaced5cf46617
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:15:14 2025 +0530
+
+    Deleted all audio files outside the Audi folder
+
+commit fbb414a1b039789200086beca7d0a99fdfebb640
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:10:51 2025 +0530
+
+    Created a folder name Audio and moved all .mp3 files into it
+
+commit 1216a92ac8022299a710590ff1d389370e58a121
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:08:22 2025 +0530
+
+    Added all mp3 files
+
+commit bf943e42990f8dbc1ed5570cc62ac6e0d6dda8de
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:04:40 2025 +0530
+
+    Added 1.mp3
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+(END)
+commit 44194ee46464af2a466083bfd22058318bd7484c
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:32:34 2025 +0530
+
+    Added ppt, script and final video
+
+commit 84538e0e277d10593ef92d2642eeaced5cf46617
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:15:14 2025 +0530
+
+    Deleted all audio files outside the Audi folder
+
+commit fbb414a1b039789200086beca7d0a99fdfebb640
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:10:51 2025 +0530
+
+    Created a folder name Audio and moved all .mp3 files into it
+
+commit 1216a92ac8022299a710590ff1d389370e58a121
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:08:22 2025 +0530
+
+    Added all mp3 files
+
+commit bf943e42990f8dbc1ed5570cc62ac6e0d6dda8de
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:04:40 2025 +0530
+
+    Added 1.mp3
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+(END)
+commit 44194ee46464af2a466083bfd22058318bd7484c
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:32:34 2025 +0530
+
+    Added ppt, script and final video
+
+commit 84538e0e277d10593ef92d2642eeaced5cf46617
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:15:14 2025 +0530
+
+    Deleted all audio files outside the Audi folder
+
+commit fbb414a1b039789200086beca7d0a99fdfebb640
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:10:51 2025 +0530
+
+    Created a folder name Audio and moved all .mp3 files into it
+
+commit 1216a92ac8022299a710590ff1d389370e58a121
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:08:22 2025 +0530
+
+    Added all mp3 files
+
+commit bf943e42990f8dbc1ed5570cc62ac6e0d6dda8de
+Author: Tabish Ali Ansari <tabish.ansari@nonstopio.com>
+Date:   Mon Mar 10 13:04:40 2025 +0530
+
+    Added 1.mp3
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+C:\tabish-practice\git-learning>git remote add origin https://github.com/tabishaliansari/Learning-French.git
+
+C:\tabish-practice\git-learning>git commit -m "Initial commit"
+On branch master
+nothing to commit, working tree clean
+
+C:\tabish-practice\git-learning>git branch -M main
+
+C:\tabish-practice\git-learning>git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 26, done.
+Counting objects: 100% (26/26), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (26/26), 138.24 MiB | 5.55 MiB/s, done.
+Total 26 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), done.
+remote: error: Trace: 2606b089e91d1e792825b24677097d989689a4b4cc9b31f4821b952d61903f69
+remote: error: See https://gh.io/lfs for more information.
+remote: error: File video.mp4 is 212.20 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+To https://github.com/tabishaliansari/Learning-French.git
+ ! [remote rejected] main -> main (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/tabishaliansari/Learning-French.git'
+
+C:\tabish-practice\git-learning>git lfs install
+Updated Git hooks.
+Git LFS initialized.
+
+C:\tabish-practice\git-learning>git lfs track "*.mp4"
+Tracking "*.mp4"
+
+C:\tabish-practice\git-learning>git add .gitattributes video.mp4
+
+C:\tabish-practice\git-learning>git commit -m "Added video.mp4 with Git LFS"
+[main 32cfde5] Added video.mp4 with Git LFS
+ 2 files changed, 1 insertion(+)
+ create mode 100644 .gitattributes
+
+C:\tabish-practice\git-learning>git push origin main
+Uploading LFS objects: 100% (1/1), 222 MB | 1.9 MB/s, done.
+Enumerating objects: 30, done.
+Counting objects: 100% (30/30), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (26/26), done.
+Writing objects: 100% (30/30), 138.24 MiB | 4.85 MiB/s, done.
+Total 30 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), done.
+remote: error: Trace: 301f554478d48d616e3131db9cf928ed910ff346618a9d44a7e2b0b3a7165dae
+remote: error: See https://gh.io/lfs for more information.
+remote: error: File video.mp4 is 212.20 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+To https://github.com/tabishaliansari/Learning-French.git
+ ! [remote rejected] main -> main (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/tabishaliansari/Learning-French.git'
+
+C:\tabish-practice\git-learning>git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+C:\tabish-practice\git-learning>git add audio/
+
+C:\tabish-practice\git-learning>git commit -m "Added audio folder"
+On branch main
+nothing to commit, working tree clean
+
+C:\tabish-practice\git-learning>git rm --cached video.mp4
+rm 'video.mp4'
+
+C:\tabish-practice\git-learning>git commit -m "Removed large file video.mp4"
+[main 71ad225] Removed large file video.mp4
+ 1 file changed, 3 deletions(-)
+ delete mode 100644 video.mp4
+
+C:\tabish-practice\git-learning>git push origin main
+Uploading LFS objects: 100% (1/1), 222 MB | 0 B/s, done.
+Enumerating objects: 32, done.
+Counting objects: 100% (32/32), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (28/28), done.
+Writing objects: 100% (32/32), 138.24 MiB | 4.45 MiB/s, done.
+Total 32 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), done.
+remote: error: Trace: 585b9033eb4e02b735d90a64b856ee5ecf9809ff1f004be6fb2e20390098d1b8
+remote: error: See https://gh.io/lfs for more information.
+remote: error: File video.mp4 is 212.20 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+To https://github.com/tabishaliansari/Learning-French.git
+ ! [remote rejected] main -> main (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/tabishaliansari/Learning-French.git'
+
+C:\tabish-practice\git-learning>
+
+C:\tabish-practice\git-learning>git rm --cached video.mp4
+fatal: pathspec 'video.mp4' did not match any files
+
+C:\tabish-practice\git-learning>git commit -m "Removed large file video.mp4"
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        video.mp4
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\tabish-practice\git-learning>git add video.mp4
+
+C:\tabish-practice\git-learning>git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   video.mp4
+
+
+C:\tabish-practice\git-learning>git rm --cached video.mp4
+rm 'video.mp4'
+
+C:\tabish-practice\git-learning>git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        video.mp4
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\tabish-practice\git-learning>git push origin main
+Uploading LFS objects: 100% (1/1), 222 MB | 0 B/s, done.
+Enumerating objects: 32, done.
+Counting objects: 100% (32/32), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (28/28), done.
+Writing objects: 100% (32/32), 138.24 MiB | 5.24 MiB/s, done.
+Total 32 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), done.
+remote: error: Trace: 9a011743e38a31937103eedf47919b762bc62e2f65c1c467dffac06bcd0d31f9
+remote: error: See https://gh.io/lfs for more information.
+remote: error: File video.mp4 is 212.20 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+To https://github.com/tabishaliansari/Learning-French.git
+ ! [remote rejected] main -> main (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/tabishaliansari/Learning-French.git'
+
+C:\tabish-practice\git-learning>git rm video.mp4
+fatal: pathspec 'video.mp4' did not match any files
+
+C:\tabish-practice\git-learning>dir
+ Volume in drive C is Windows-SSD
+ Volume Serial Number is 2A5D-0CF7
+
+ Directory of C:\tabish-practice\git-learning
+
+03/10/2025  02:04 PM    <DIR>          .
+03/10/2025  12:33 PM    <DIR>          ..
+03/10/2025  02:04 PM                43 .gitattributes
+03/10/2025  01:13 PM    <DIR>          Audio
+03/10/2025  12:24 PM        11,372,190 presentation.pptx
+03/10/2025  01:36 PM               188 README.md
+03/10/2025  01:20 PM             3,774 script.txt
+03/10/2025  02:04 PM       222,502,663 video.mp4
+               5 File(s)    233,878,858 bytes
+               3 Dir(s)  415,892,910,080 bytes free
+
+C:\tabish-practice\git-learning>rm video.mp4
+'rm' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\tabish-practice\git-learning>del video.mp4
+
+C:\tabish-practice\git-learning>dir
+ Volume in drive C is Windows-SSD
+ Volume Serial Number is 2A5D-0CF7
+
+ Directory of C:\tabish-practice\git-learning
+
+03/10/2025  02:33 PM    <DIR>          .
+03/10/2025  12:33 PM    <DIR>          ..
+03/10/2025  02:04 PM                43 .gitattributes
+03/10/2025  01:13 PM    <DIR>          Audio
+03/10/2025  12:24 PM        11,372,190 presentation.pptx
+03/10/2025  01:36 PM               188 README.md
+03/10/2025  01:20 PM             3,774 script.txt
+               4 File(s)     11,376,195 bytes
+               3 Dir(s)  416,115,478,528 bytes free
+
+C:\tabish-practice\git-learning>git push origin main
+Enumerating objects: 32, done./1), 222 MB | 0 B/s
+Counting objects: 100% (32/32), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (28/28), done.
+Writing objects: 100% (32/32), 138.24 MiB | 4.70 MiB/s, done.
+Total 32 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), done.
+remote: error: Trace: 38b9278cd4e5a5b9648d5f5a5b81e3584bc5a5876974b16a1e5b5cc3b9fa9566
+remote: error: See https://gh.io/lfs for more information.
+remote: error: File video.mp4 is 212.20 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+To https://github.com/tabishaliansari/Learning-French.git
+ ! [remote rejected] main -> main (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/tabishaliansari/Learning-French.git'
+
+C:\tabish-practice\git-learning>git rm --cached video.mp4
+fatal: pathspec 'video.mp4' did not match any files
+
+C:\tabish-practice\git-learning>cool
+'cool' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\tabish-practice\git-learning>git add Audio/
+
+C:\tabish-practice\git-learning>git commit -m "Added Audio folder"
+On branch main
+nothing to commit, working tree clean
+
+C:\tabish-practice\git-learning>git push origin main
+Enumerating objects: 32, done./1), 222 MB | 0 B/s
+Counting objects: 100% (32/32), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (28/28), done.
+Writing objects: 100% (32/32), 138.24 MiB | 3.97 MiB/s, done.
+Total 32 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), done.
+remote: error: Trace: a3f71c781a6b747e6552003606e6c16cb592d44dd885d0b951f941a0afb2dbe2
+remote: error: See https://gh.io/lfs for more information.
+remote: error: File video.mp4 is 212.20 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+To https://github.com/tabishaliansari/Learning-French.git
+ ! [remote rejected] main -> main (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/tabishaliansari/Learning-French.git'
+
+C:\tabish-practice\git-learning>git status
+On branch main
+nothing to commit, working tree clean
+
+C:\tabish-practice\git-learning>dir
+ Volume in drive C is Windows-SSD
+ Volume Serial Number is 2A5D-0CF7
+
+ Directory of C:\tabish-practice\git-learning
+
+03/10/2025  02:33 PM    <DIR>          .
+03/10/2025  12:33 PM    <DIR>          ..
+03/10/2025  02:04 PM                43 .gitattributes
+03/10/2025  01:13 PM    <DIR>          Audio
+03/10/2025  12:24 PM        11,372,190 presentation.pptx
+03/10/2025  01:36 PM               188 README.md
+03/10/2025  01:20 PM             3,774 script.txt
+               4 File(s)     11,376,195 bytes
+               3 Dir(s)  416,110,268,416 bytes free
+
+C:\tabish-practice\git-learning>git filter-branch --force --index-filter "git rm --cached --ignore-unmatch video.mp4" --prune-empty --tag-name-filter cat -- --all
+WARNING: git-filter-branch has a glut of gotchas generating mangled history
+         rewrites.  Hit Ctrl-C before proceeding to abort, then use an
+         alternative filtering tool such as 'git filter-repo'
+         (https://github.com/newren/git-filter-repo/) instead.  See the
+         filter-branch manual page for more details; to squelch this warning,
+         set FILTER_BRANCH_SQUELCH_WARNING=1.
+Proceeding with filter-branch...
+
+Rewrite 44194ee46464af2a466083bfd22058318bd7484c (5/10) (4 seconds passed, remaining 4 predicted)    rm 'video.mp4'
+Rewrite 72d831851f5fdd4821b3e224c4b45378897f0dad (5/10) (4 seconds passed, remaining 4 predicted)    rm 'video.mp4'
+Rewrite 81cc5486715da5399b647b0d4751dccfe515c8b4 (7/10) (7 seconds passed, remaining 3 predicted)    rm 'video.mp4'
+Rewrite 666ffd9e2d715631d4d8684c2efd15b72d64b222 (7/10) (7 seconds passed, remaining 3 predicted)    rm 'video.mp4'
+Rewrite 32cfde54ecbf517d9d4f7cd2bd1f98416b870d7f (9/10) (9 seconds passed, remaining 1 predicted)    rm 'video.mp4'
+Rewrite 71ad225bced628eebebb8c5a90d55792798e029e (9/10) (9 seconds passed, remaining 1 predicted)
+Ref 'refs/heads/main' was rewritten
+
+C:\tabish-practice\git-learning>git lfs ls-files
+
+C:\tabish-practice\git-learning>git push origin main --force
+Enumerating objects: 28, done.
+Counting objects: 100% (28/28), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (24/24), done.
+Writing objects: 100% (28/28), 14.12 MiB | 2.64 MiB/s, done.
+Total 28 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/tabishaliansari/Learning-French.git
+ * [new branch]      main -> main
+
+C:\tabish-practice\git-learning>git add README.md
+
+C:\tabish-practice\git-learning>notepad README.md
+
+C:\tabish-practice\git-learning>git commit -m "Added drive video link to README.md"
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\tabish-practice\git-learning>git push origin main
+Everything up-to-date
+
+C:\tabish-practice\git-learning>git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\tabish-practice\git-learning>git add README.md
+
+C:\tabish-practice\git-learning>git commit -m "Modified README.md"
+[main ccef6bb] Modified README.md
+ 1 file changed, 3 insertions(+)
+
+C:\tabish-practice\git-learning>git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 419 bytes | 209.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/tabishaliansari/Learning-French.git
+   2e830ba..ccef6bb  main -> main
+
+C:\tabish-practice\git-learning>git branch new
+
+C:\tabish-practice\git-learning>git switch bew
+fatal: invalid reference: bew
+
+C:\tabish-practice\git-learning>git switch new
+Switched to branch 'new'
+
+C:\tabish-practice\git-learning>echo Hello > new.txt
+
+C:\tabish-practice\git-learning>notepad new.txt
+
+C:\tabish-practice\git-learning>git status
+On branch new
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        new.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\tabish-practice\git-learning>git add new.txt
+
+C:\tabish-practice\git-learning>git commit -m "modifying new.txt"
+[new 8dec7c2] modifying new.txt
+ 1 file changed, 6 insertions(+)
+ create mode 100644 new.txt
+
+C:\tabish-practice\git-learning>git switch main
+Switched to branch 'main'
+
+C:\tabish-practice\git-learning>git merge main
+Already up to date.
+
+C:\tabish-practice\git-learning>git merge new
+Updating ccef6bb..8dec7c2
+Fast-forward
+ new.txt | 6 ++++++
+ 1 file changed, 6 insertions(+)
+ create mode 100644 new.txt
+
+C:\tabish-practice\git-learning>cool
+'cool' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\tabish-practice\git-learning>git stash
+No local changes to save
+
+C:\tabish-practice\git-learning>git tag
+
+C:\tabish-practice\git-learning>
