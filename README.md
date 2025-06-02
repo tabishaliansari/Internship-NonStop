@@ -4,6 +4,7 @@ Welcome to my personal repository documenting my journey of mastering **Java** a
 
 <p align="center">
   <img src="assets/java.gif" alt="Java GIF" width="50"/>
+  <img src="assets/springboot.png" alt="Spring Boot Image" width="50"/>
 </p>
 ---
 
