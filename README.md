@@ -2,8 +2,10 @@
 
 Welcome to my personal repository documenting my journey of mastering **Java** and **Spring Boot** during my internship at **NonStop io Technologies** – my first professional tech experience! 🌱
 
-![Java](assets/java.gif)
-<img src="assets/demo.gif" width="500"/>
+<img src="assets/java.gif" width="500"/>
+<p align="center">
+  <img src="assets/java.gif" alt="Java GIF" width="500"/>
+</p>
 ---
 
 ## 📘 What I've Learned So Far
