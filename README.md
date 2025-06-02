@@ -21,6 +21,7 @@ Welcome to my personal repository documenting my journey of mastering **Java** a
   <img src="assets/github.svg" alt="GitHub" width="50"/>
   <img src="assets/chatgpt.svg" alt="ChatGPT" width="50"/>
 </p>
+
 ---
 
 ## 📘 What I've Learned So Far
