@@ -2,7 +2,8 @@
 
 Welcome to my personal repository documenting my journey of mastering **Java** and **Spring Boot** during my internship at **NonStop io Technologies** – my first professional tech experience! 🌱
 
-![Java](https://www.google.com/url?sa=i&url=https%3A%2F%2Fgithub.com%2Fpranshuag9&psig=AOvVaw3-4Baj_bpJic7ZRkEgttDe&ust=1748610965446000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNCeqM3hyI0DFQAAAAAdAAAAABAo)
+![Java](assets/java.gif)
+<img src="assets/demo.gif" width="500"/>
 ---
 
 ## 📘 What I've Learned So Far
