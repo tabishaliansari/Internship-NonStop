@@ -3,7 +3,7 @@
 Welcome to my personal repository documenting my journey of mastering **Java** and **Spring Boot** during my internship at **NonStop io Technologies** – my first professional tech experience! 🌱
 
 <p align="center">
-  <img src="assets/java.gif" alt="Java GIF" width="75"/>
+  <img src="assets/java.gif" alt="Java GIF" width="50"/>
 </p>
 ---
 
